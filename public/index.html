@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="author" content="Xavie Can">
+        <meta name="description" content="XC's Age Calculator.">
+        <title>XC Age Checker</title>
+        <link rel="icon" href="./favicon.png">
+        <link rel="stylesheet" href="/src/index.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    </head>
+
+    <body class="container mt-5" style="width: auto; height: auto;">
+        <noscript>You need to enable JavaScript to run this app.</noscript>
+        <h1>Xavie Can Age Checker</h1>
+        <br>
+        <div >
+            <form>
+                <div> <label for="birth_date">Birth Date: </label>
+                    <input type="date" id="birth_date" name="birth_date" onchange="PrintAge()"/>
+                </div>
+                <div id="currentage" style="padding-top:1em; font-weight: bold;"></div>
+                <div id="age" style="font-weight: bold;"></div>
+                <div id="tooyoung" style="padding-top:2em; color: red; font-weight: bold;"></div>
+                <div id="AN" style="padding-top:2em; color: green; font-weight: bold;"></div>
+                <div id="TN" style="padding-top:2em; color: blue; font-weight: bold;"></div>
+                <div id="NS" style="padding-top:2em; color: goldenrod; font-weight: bold;"></div>
+                <div id="HS" style="padding-top:2em; color: brown; font-weight: bold;"></div>
+                <div id="HSTT" style="padding-top:2em; color: red; font-weight: bold;"></div>
+            </form>
+        </div>
+    </body>
+</html>

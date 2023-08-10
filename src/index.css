@@ -1,3 +1,125 @@
-body{
-    font-family: sans-serif, Arial;
+* {
+  font-family: Lexend, sans-serif, Helvetica, Arial;
+}
+
+body {
+  background-color: lightgoldenrodyellow;
+}
+
+p, #status {
+  font-size: 1.25rem;
+}
+
+#HS {
+  color: #92623a;
+}
+
+.navbar {
+  width: 100%;
+  color: white;
+  background-color: lightblue;
+  top: 0;
+  left: 0;
+  text-shadow: 0.5px 0.5px 0.5px black;
+  display: flex;
+}
+
+.navbar img {
+  display: none;
+}
+
+.dropdown {
+  display: flex;
+  align-items: center;
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  display: inline;
+  margin: 0 0 0 1rem;
+  color: white;
+  font-size: .8em;
+  margin-right: .5em;
+  text-decoration: none;
+}
+
+footer {
+  margin-top: 10 rem;
+}
+
+.footer-items {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  /*  */
+  width: 100%;
+  color: 	#3d5a80;;
+  background-color: lightblue;
+  /* text-shadow: 0.5px 0.5px 0.5px black; */
+  padding-left: 1rem;
+}
+
+.footer-email {
+  display: flex;
+
+}
+
+footer a {
+  color: 	#3d5a80;
+  text-decoration: none;
+}
+
+footer p {
+  margin: 5px 10px;
+  line-height: 1;
+}
+
+footer p:last-of-type {
+  padding-top: 4px;
+  padding-bottom: 1px;
+  font-size: 12px;
+}
+
+.hamburger-menu-list li:nth-child(n){
+  display: inline;
+}
+
+.link {
+  color: 	#3d5a80;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.link:hover, .link.active, .link:focus {
+  color: #293241;
+  border-bottom: solid .35rem #293241;
+  /* font-weight: 1000; */
+  text-decoration: none;
+}
+
+/* Site logo */
+.dropdown .site-logo {
+  height: 2em;
+  object-fit: cover;
+  padding: 0;
+  align-items: center;
+  display: flex;
+}
+
+.navbar img{
+  display: inline;
+  height: 2.5rem;
+}
+
+/* -- */
+@media (min-width: 768px) {
+  .navbar img{
+      display: inline;
+      height: 4rem;
   }
+}

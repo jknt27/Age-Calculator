@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
 export default function Menu () {
-
     return (
         <nav className='main-nav navbar'>
             <div className="dropdown">

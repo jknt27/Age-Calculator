@@ -2,12 +2,6 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
 export default function Menu () {
-    // Opening Nav [Later problem :D]
-    // const [isOpen, openIt] = useState(false);
-
-    // const openOrClose = () => {
-    //     openIt(!isOpen);
-    // };
 
     return (
         <nav className='main-nav navbar'>

@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Age-Calculator/static/css/main.69442f5d.css",
-    "main.js": "/Age-Calculator/static/js/main.dc0df169.js",
-    "static/media/favicon.png": "/Age-Calculator/static/media/favicon.59bcb36557b2a09dd00e.png",
-    "index.html": "/Age-Calculator/index.html",
-    "main.69442f5d.css.map": "/Age-Calculator/static/css/main.69442f5d.css.map",
-    "main.dc0df169.js.map": "/Age-Calculator/static/js/main.dc0df169.js.map"
+    "main.css": "/Age-Calculator/tntt/static/css/main.69442f5d.css",
+    "main.js": "/Age-Calculator/tntt/static/js/main.db807bb3.js",
+    "static/media/favicon.png": "/Age-Calculator/tntt/static/media/favicon.59bcb36557b2a09dd00e.png",
+    "index.html": "/Age-Calculator/tntt/index.html",
+    "main.69442f5d.css.map": "/Age-Calculator/tntt/static/css/main.69442f5d.css.map",
+    "main.db807bb3.js.map": "/Age-Calculator/tntt/static/js/main.db807bb3.js.map"
   },
   "entrypoints": [
     "static/css/main.69442f5d.css",
-    "static/js/main.dc0df169.js"
+    "static/js/main.db807bb3.js"
   ]
 }

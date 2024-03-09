@@ -1,7 +1,7 @@
 {
   "name": "agecalc",
   "version": "1.0.0",
-  "homepage": "https://jknt27.github.io/Age-Calculator",
+  "homepage": "https://jknt27.github.io/Age-Calculator/tntt",
   "main": "index.js",
   "scripts": {
     "predeploy": "npm run build",

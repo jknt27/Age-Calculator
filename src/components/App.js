@@ -11,10 +11,10 @@ export default function App() {
         <div className='XCAgeCalculator'>
             <Menu />
             <Routes>
-                <Route path='' element={<Navigate to='/tntt' />} />
-                <Route path='/tntt' element={<TNTT />} />
-                <Route path='fc' element={<FC />} />
-                <Route path='*' element={<Navigate to='/tntt' />} />
+                <Route path='' element={<Navigate to='/Age-Calculator/tntt' />} />
+                <Route path='Age-Calculator/tntt' element={<TNTT />} />
+                <Route path='Age-Calculator/fc' element={<FC />} />
+                <Route path='*' element={<Navigate to='Age-Calculator/tntt' />} />
             </Routes>
             <Footer />
         </div>

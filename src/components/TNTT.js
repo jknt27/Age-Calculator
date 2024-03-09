@@ -1,31 +1,33 @@
 import React, { useEffect, useState } from 'react';
+import moment from 'moment';
+// Replace date below to update for future (YYYYMMDD).
+let CUTOFFDATE = "20240831";
 
 
 function CalculateCutoffAge(date) {
-  let bday = new Date(date)
-  // Replace date below to update for future (YYYY/MM/DD).
-  const cutoffDate = new Date("2024/08/31");
+  let bday = moment(date).utc();
+  const cutoffDate = moment(CUTOFFDATE, "YYYYMMDD").utc();
   const diff = Math.abs(cutoffDate - bday);
   const age = Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25)); 
   return age
 }
 
 function CalculateCurrentAge(date) {
-  let bday = new Date(date)
-  const todaysDate = new Date();
+  let bday = moment(date).utc();
+  const todaysDate = moment().utc();
   const diff = Math.abs(todaysDate - bday);
   const age = Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25)); 
-  return age
+  return age;
 }
   
-function CalculateAge (bday) {
+function CalculateAge (bday, cutoff) {
     
   let age = CalculateCutoffAge(bday);
   let currentAge = CalculateCurrentAge(bday);
   
   // Replace date below to remove confusion.
   const StudentAge = "Student is currently: " + currentAge + " yr";
-  const CutoffAge = "Age by August 2024: " + age + " yr";
+  const CutoffAge = "Age by " + moment(cutoff).format('MMMM YYYY') + ": " + age + " yr";
     
   if (age <= 35 && age > 1) {
     if (age < 6) {
@@ -172,17 +174,23 @@ function CalculateAge (bday) {
 
 export default function TNTT() {
 
-  const[bday, setBday] = useState(new Date());
-  // const[agenum, setAgeNum] = useState();
+  const[bday, setBday] = useState(moment().format('yyyy-MM-DD'));
+  const[cutoff, setCutoff] = useState(moment(CUTOFFDATE).format('yyyy-MM-DD'));
 
   return (
     <div className="container mt-5 mx-3 w-auto tnttpage">
       <h1 className='pb-4'>Xavie Can Age Checker</h1>
       <form>
         <div> 
-          <h3 id="birth_date" className='pl-5'>Birth Date</h3>
-          <input type="date" id="birth_date" name="birth_date" defaultValue={new Date().toISOString().split('T')[0]} onChange={(bday) => setBday(new Date(bday.target.value))} className='p-2'/>
-          {CalculateAge(bday)}
+          <div>
+            <h3 id="cutoff_date" className='pl-5'>Cut-Off Date</h3>
+            <input type='date' id='cutoff_date' name='cutoff_date' defaultValue={cutoff} onChange={(cutoffday) => setCutoff(moment(cutoffday.target.value).format('yyyy-MM-DD'))} className='p-2'/>
+          </div>
+          <div className='pt-4'>
+            <h3 id="birth_date" className='pl-5'>Birth Date</h3>
+            <input type="date" id="birth_date" name="birth_date" defaultValue={bday} onChange={(bday) => setBday(moment(bday.target.value).format('yyyy-MM-DD'))} className='p-2'/>
+          </div>
+          {CalculateAge(bday, cutoff)}
         </div>
       </form>
     </div>

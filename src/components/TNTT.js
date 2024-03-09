@@ -4,9 +4,9 @@ import moment from 'moment';
 let CUTOFFDATE = "20240831";
 
 
-function CalculateCutoffAge(date) {
+function CalculateCutoffAge(date, cutoff) {
   let bday = moment(date).utc();
-  const cutoffDate = moment(CUTOFFDATE, "YYYYMMDD").utc();
+  const cutoffDate = moment(cutoff, "YYYYMMDD").utc();
   const diff = Math.abs(cutoffDate - bday);
   const age = Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25)); 
   return age
@@ -22,7 +22,7 @@ function CalculateCurrentAge(date) {
   
 function CalculateAge (bday, cutoff) {
     
-  let age = CalculateCutoffAge(bday);
+  let age = CalculateCutoffAge(bday, cutoff);
   let currentAge = CalculateCurrentAge(bday);
   
   // Replace date below to remove confusion.

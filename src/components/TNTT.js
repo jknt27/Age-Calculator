@@ -179,7 +179,7 @@ export default function TNTT() {
 
   return (
     <div className="container mt-5 mx-3 w-auto tnttpage">
-      <h1 className='pb-4'>Xavie Can Age Checker</h1>
+      <h1 className='pb-4'>Xaviê Cần Age Checker</h1>
       <form>
         <div> 
           <div>
